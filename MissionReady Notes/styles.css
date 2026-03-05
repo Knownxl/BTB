@@ -64,7 +64,43 @@ div.container-lede:hover {
     transition: all 0.2s ease-in-out;
 }
 
+textarea#custom-message {
+    /* Sizing and Spacing */
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box; /* Ensures padding/border are included in width/height */
 
+    /* Appearance */
+    background-color: #f8f8f8;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: sans-serif; /* Inherit or set a specific font */
+    color: #333;
+    field-sizing: content-box; /* Default is content-box, but can be set to border-box if you want padding/border included in size */
+    min-height: 2em; /* Minimum height to prevent collapsing */;
+    resize: vertical; /* Allow resizing only vertically (or horizontal/none/both) */    
+}
+
+/* Styling on focus (when the user clicks the field) */
+textarea#custom-message:focus {
+    outline: none; /* Removes default browser outline */
+    border-color: #4CAF50; /* Change border color to highlight focus */
+    background-color: #fff;
+    transition: all 0.3s ease-in-out; /* Smooth transition for visual changes */
+}
+
+/* Styling the placeholder text */
+textarea#custom-message::placeholder {
+    color: #999;
+    opacity: 1; /* Standard browsers */
+}
+
+/* Change cursor on hover (optional) */
+textarea#custom-message:hover {
+    cursor: text;
+}
 
 
 div.container-note-taking {
